@@ -427,7 +427,7 @@
       <a href="https://www.tiktok.com/@gabyboeira_" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
       <a href="https://www.facebook.com/boeirastudio" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
-    <a class="nav-cta" href="https://wa.me/5547996323638" target="_blank">
+    <a class="nav-cta" href="https://wa.me/5547996323638?text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+da+Boeira+Studio.+%F0%9F%98%8A" target="_blank">
       <i class="fab fa-whatsapp"></i> Agendar
     </a>
   </nav>
@@ -745,7 +745,7 @@
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a class="wa-float" href="https://wa.me/5547996323638" target="_blank" title="Falar no WhatsApp">
+  <a class="wa-float" href="https://wa.me/5547996323638?text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+da+Boeira+Studio.+%F0%9F%98%8A" target="_blank" title="Falar no WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -787,7 +787,7 @@
         <ul class="proc-list" id="tmodal-procs"></ul>
       </div>
       <div class="modal-footer">
-        <a href="https://wa.me/5547996323638" target="_blank">
+        <a id="tmodal-wa-link" href="https://wa.me/5547996323638" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i> Agendar com esta profissional
         </a>
       </div>
@@ -1113,6 +1113,8 @@
       document.getElementById('tmodal-procs').innerHTML = t.services.map(s =>
         `<li class="proc-item"><span class="proc-dot"></span><div><div class="proc-name">${s.name}</div><div class="proc-desc">${s.desc}</div></div></li>`
       ).join('');
+      const tmsg = encodeURIComponent(`Olá! Gostaria de agendar um horário com *${t.name}* na Boeira Studio. 😊`);
+      document.getElementById('tmodal-wa-link').href = `https://wa.me/5547996323638?text=${tmsg}`;
       document.getElementById('modal-team').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
