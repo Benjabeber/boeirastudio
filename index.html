@@ -320,6 +320,14 @@
     }
     .proc-name { font-weight: 500; font-size: .87rem; color: var(--dark); margin-bottom: .22rem; }
     .proc-desc { font-size: .79rem; color: var(--mid); line-height: 1.6; }
+    .proc-wa {
+      display: inline-flex; align-items: center; gap: .35rem;
+      margin-top: .55rem; font-size: .74rem; font-weight: 500;
+      color: #1aad52; text-decoration: none;
+      background: #e8f9ef; border-radius: 2rem;
+      padding: .28rem .8rem; transition: background .2s;
+    }
+    .proc-wa:hover { background: #d0f3df; }
     .modal-footer {
       padding: 1.2rem 2.2rem 1.8rem; border-top: 1px solid var(--rose-l);
       flex-shrink: 0; display: flex; justify-content: center;
@@ -754,7 +762,7 @@
         <ul class="proc-list" id="modal-procs"></ul>
       </div>
       <div class="modal-footer">
-        <a href="https://wa.me/5547996323638" target="_blank">
+        <a id="modal-wa-link" href="https://wa.me/5547996323638" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i> Agendar este serviço
         </a>
       </div>
@@ -931,9 +939,13 @@
       document.getElementById('modal-icon').innerHTML = s.icon;
       document.getElementById('modal-title').textContent = s.title;
       document.getElementById('modal-intro').textContent = s.intro;
-      document.getElementById('modal-procs').innerHTML = s.procs.map(p =>
-        `<li class="proc-item"><span class="proc-dot"></span><div><div class="proc-name">${p.name}</div><div class="proc-desc">${p.desc}</div></div></li>`
-      ).join('');
+      const waBase = 'https://wa.me/5547996323638?text=';
+      document.getElementById('modal-procs').innerHTML = s.procs.map(p => {
+        const msg = encodeURIComponent(`Olá! Gostaria de mais informações sobre *${p.name}* na Boeira Studio. 😊`);
+        return `<li class="proc-item"><span class="proc-dot"></span><div><div class="proc-name">${p.name}</div><div class="proc-desc">${p.desc}</div><a class="proc-wa" href="${waBase}${msg}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Pedir informação</a></div></li>`;
+      }).join('');
+      const footerMsg = encodeURIComponent(`Olá! Gostaria de agendar um serviço de *${s.title}* na Boeira Studio. 😊`);
+      document.getElementById('modal-wa-link').href = `${waBase}${footerMsg}`;
       document.getElementById('modal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
