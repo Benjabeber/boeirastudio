@@ -252,10 +252,119 @@
     /* ── FOOTER ── */
     footer {
       background: var(--dark); color: rgba(255,255,255,.55);
-      text-align: center; padding: 2rem 1rem; font-size: .8rem; line-height: 1.8;
+      font-size: .85rem; line-height: 1.8;
     }
-    footer a { color: var(--rose); text-decoration: none; }
-    footer strong { color: rgba(255,255,255,.85); }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 2.5rem;
+    }
+    .footer-brand .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: .25rem;
+    }
+    .footer-brand .footer-sub {
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+    .footer-brand p {
+      font-size: .8rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .footer-socials {
+      display: flex;
+      gap: .6rem;
+    }
+    .footer-socials a {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: .4rem;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.55);
+      font-size: .95rem;
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+    }
+    .footer-socials a:hover {
+      border-color: var(--rose);
+      color: var(--rose);
+    }
+    .footer-col h4 {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.1rem;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+    }
+    .footer-col ul li a {
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      transition: color .2s;
+      font-size: .82rem;
+    }
+    .footer-col ul li a:hover { color: var(--rose); }
+    .footer-col .footer-contact-item {
+      color: rgba(255,255,255,.5);
+      font-size: .82rem;
+      line-height: 1.5;
+      margin-bottom: .55rem;
+    }
+    .footer-col .footer-contact-item a {
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-col .footer-contact-item a:hover { color: var(--rose); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .75rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-bottom a {
+      color: rgba(255,255,255,.3);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-bottom a:hover { color: var(--rose); }
+    .footer-bottom-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .footer-bottom-links span { opacity: .4; }
+    @media (max-width: 860px) {
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 520px) {
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: .6rem; text-align: center; }
+    }
 
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
@@ -733,15 +842,68 @@
 
   <!-- FOOTER -->
   <footer>
-    <p><strong>Boeira Studio</strong> · Av. Thiago Aguiar, 799 · Jardim Icaraí · Barra Velha · SC</p>
-    <p style="margin-top:.4rem;">
-      <a href="https://www.instagram.com/boeirastudio/" target="_blank">Instagram</a> &nbsp;·&nbsp;
-      <a href="https://www.tiktok.com/@gabyboeira_" target="_blank">TikTok</a> &nbsp;·&nbsp;
-      <a href="https://www.facebook.com/boeirastudio" target="_blank">Facebook</a> &nbsp;·&nbsp;
-      <a href="https://wa.me/5547996323638" target="_blank">WhatsApp</a>
-    </p>
-    <p style="margin-top:.6rem;opacity:.4;">© 2025 Boeira Studio</p>
-    <p style="margin-top:.4rem;font-size:.75rem;"><strong><a href="https://lvbsistemas.com" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;">Desenvolvido por LVB Sistemas</a></strong></p>
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">Boeira Studio</div>
+        <div class="footer-sub">Studio de Beleza</div>
+        <p>Studio de beleza em Barra Velha/SC.<br>Cabelo, estética e cuidado com você.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/5547996323638" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/boeirastudio/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/boeirastudio" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@gabyboeira_" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="https://wa.me/5547996323638" target="_blank">Agendar</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="footer-contact-item">
+          Av. Thiago Aguiar, 799<br>
+          Jardim Icaraí · Barra Velha · SC
+        </div>
+        <div class="footer-contact-item">
+          <a href="https://wa.me/5547996323638" target="_blank">(47) 99632-3638</a>
+        </div>
+        <div class="footer-contact-item">
+          <a href="https://www.instagram.com/boeirastudio/" target="_blank">@boeirastudio</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Boeira Studio. Todos os direitos reservados.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidade</a>
+        <span>•</span>
+        <a href="#">Termos</a>
+        <span>•</span>
+        <a href="https://lvbsistemas.com" target="_blank" rel="noopener">LVB Sistemas</a>
+      </div>
+    </div>
   </footer>
 
   <!-- WHATSAPP FLOAT -->
