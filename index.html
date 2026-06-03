@@ -366,6 +366,42 @@
       .footer-bottom { flex-direction: column; gap: .6rem; text-align: center; }
     }
 
+    /* ── MENTORIA STRIP ── */
+    .mentoria-strip {
+      background: var(--dark); padding: 3rem 2rem;
+    }
+    .mentoria-strip-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .mentoria-eyebrow {
+      font-size: .68rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: .35rem;
+    }
+    .mentoria-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 400;
+      color: var(--white); line-height: 1.2; margin-bottom: .4rem;
+    }
+    .mentoria-title em { font-style: italic; color: var(--rose); }
+    .mentoria-sub {
+      font-size: .84rem; color: rgba(255,255,255,.52); line-height: 1.6;
+      max-width: 460px;
+    }
+    .btn-mentoria {
+      background: var(--rose); color: var(--white);
+      padding: .75rem 2rem; border-radius: 2rem; text-decoration: none;
+      font-size: .88rem; font-weight: 500; white-space: nowrap; flex-shrink: 0;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: background .25s, transform .2s;
+    }
+    .btn-mentoria:hover { background: var(--gold); transform: translateY(-2px); }
+    @media (max-width: 620px) {
+      .mentoria-strip-inner { flex-direction: column; }
+      .btn-mentoria { width: 100%; justify-content: center; }
+      .mentoria-title { font-size: 1.5rem; }
+    }
+
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
       position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 99;
@@ -569,6 +605,20 @@
   <!-- ABOUT STRIP -->
   <div class="about-strip">
     <p>Atendimento <strong>personalizado e exclusivo</strong>, somente com horário marcado. Pedimos que respeitem o horário agendado, com tolerância de até <strong>10 minutos</strong>. Se possível, chegue 5 minutos antes.</p>
+  </div>
+
+  <!-- MENTORIA STRIP -->
+  <div class="mentoria-strip">
+    <div class="mentoria-strip-inner">
+      <div>
+        <p class="mentoria-eyebrow">Formação Exclusiva</p>
+        <h2 class="mentoria-title">Mentoria VIP · <em>Criolipólise</em></h2>
+        <p class="mentoria-sub">Domine a técnica, o equipamento e os protocolos de timing para resultados de alto nível.</p>
+      </div>
+      <a class="btn-mentoria" href="/mentoriacrio/">
+        Saiba mais <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
   </div>
 
   <!-- SERVICES -->
@@ -865,6 +915,7 @@
           <li><a href="#equipe">Equipe</a></li>
           <li><a href="#localizacao">Localização</a></li>
           <li><a href="https://wa.me/5547996323638" target="_blank">Agendar</a></li>
+          <li><a href="/mentoriacrio/">Mentoria VIP</a></li>
         </ul>
       </div>
 
