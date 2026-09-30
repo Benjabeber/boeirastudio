@@ -3,19 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boeira Studio | Studio de Beleza</title>
+  <title>Boeira Studio | Studio de Beleza em Barra Velha - SC</title>
+  <meta name="description" content="Boeira Studio: mais de 70 procedimentos de estética, cabelo, cílios, sobrancelhas e bem-estar em Barra Velha/SC. Atendimento exclusivo com horário marcado. Agende pelo WhatsApp." />
+  <link rel="canonical" href="https://www.boeirastudio.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Boeira Studio | Studio de Beleza em Barra Velha - SC" />
+  <meta property="og:description" content="Mais de 70 procedimentos para realçar sua beleza — atendimento personalizado, exclusivo e horário marcado." />
+  <meta property="og:image" content="https://www.boeirastudio.com.br/extracted_images/opt/hero-1.jpg" />
+  <meta property="og:url" content="https://www.boeirastudio.com.br/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="preload" as="image" href="extracted_images/opt/hero-1.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Red+Hat+Display:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Red+Hat+Display:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Red+Hat+Display:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --rose:   #BFB8B0;
+      --rose:   #8A5A42;
       --rose-l: #E8E4E0;
-      --gold:   #A6A6A6;
+      --gold:   #6E4A38;
       --dark:   #0D0D0D;
       --mid:    #6E6C6A;
       --light:  #F2F2F0;
@@ -215,7 +230,7 @@
     }
     .team-card:hover .team-avatar { border-color: var(--rose); box-shadow: 0 6px 22px rgba(201,134,107,.3); }
     .team-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .team-card h4 { font-size: .88rem; font-weight: 500; color: var(--dark); margin-bottom: .25rem; }
+    .team-card h3 { font-size: .88rem; font-weight: 500; color: var(--dark); margin-bottom: .25rem; }
     .team-card .team-role { font-size: .75rem; color: var(--mid); display: block; }
     .team-card-more {
       display: inline-flex; align-items: center; gap: .3rem;
@@ -302,7 +317,7 @@
       border-color: var(--rose);
       color: var(--rose);
     }
-    .footer-col h4 {
+    .footer-col h3 {
       font-size: .72rem;
       font-weight: 600;
       letter-spacing: .18em;
@@ -566,7 +581,7 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#"><img src="logo.jpg" alt="Boeira Studio">Boeira Studio</a>
+    <a class="nav-logo" href="#"><img src="logo.jpg" alt="" width="36" height="36">Boeira Studio</a>
     <div class="nav-social">
       <a href="https://www.instagram.com/boeirastudio/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@gabyboeira_" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -581,9 +596,9 @@
   <section class="hero" id="inicio">
     <!-- Slides -->
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide" style="background-image:url('extracted_images/img_p10_1.jpeg')"></div>
-      <div class="hero-slide" style="background-image:url('extracted_images/img_p6_1.jpeg')"></div>
-      <div class="hero-slide" style="background-image:url('extracted_images/img_p15_1.jpeg')"></div>
+      <div class="hero-slide" style="background-image:url('extracted_images/opt/hero-1.jpg')"></div>
+      <div class="hero-slide" data-bg="extracted_images/opt/hero-2.jpg"></div>
+      <div class="hero-slide" data-bg="extracted_images/opt/hero-3.jpg"></div>
     </div>
     <!-- Arrows -->
     <button class="hero-arrow prev" onclick="heroSlide(-1)" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
@@ -697,11 +712,11 @@
       <h2 class="section-title">Nosso espaço &amp; resultados</h2>
       <div class="divider"></div>
       <div class="gallery-grid">
-        <img src="extracted_images/img_p6_1.jpeg" alt="Studio de Beleza" loading="lazy" />
-        <img src="extracted_images/img_p7_1.jpeg" alt="Tratamentos" loading="lazy" />
-        <img src="extracted_images/img_p9_1.jpeg" alt="Sobrancelhas" loading="lazy" />
-        <img src="extracted_images/img_p11_1.jpeg" alt="Nail Care" loading="lazy" />
-        <img src="extracted_images/img_p16_1.jpg" alt="Beleza" loading="lazy" />
+        <img src="extracted_images/opt/gallery-1.jpg" alt="Studio de Beleza" width="800" height="447" loading="lazy" decoding="async" />
+        <img src="extracted_images/opt/gallery-2.jpg" alt="Tratamentos" width="800" height="447" loading="lazy" decoding="async" />
+        <img src="extracted_images/opt/gallery-3.jpg" alt="Sobrancelhas" width="800" height="447" loading="lazy" decoding="async" />
+        <img src="extracted_images/opt/gallery-4.jpg" alt="Nail Care" width="800" height="447" loading="lazy" decoding="async" />
+        <img src="extracted_images/opt/gallery-5.jpg" alt="Beleza" width="800" height="446" loading="lazy" decoding="async" />
       </div>
       <p style="text-align:center;margin-top:1.6rem;font-size:.82rem;color:var(--mid);">
         Siga-nos no <a href="https://www.instagram.com/boeirastudio/" target="_blank" style="color:var(--rose);font-weight:500;">@boeirastudio</a> para ver mais resultados
@@ -733,98 +748,98 @@
 
         <div class="team-card" data-key="gaby" data-cats="sobrancelhas,bemestar,harmonizacao" onclick="openTeamModal('gaby')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Gaby+Boeira&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Gaby Boeira" /></div>
-          <h4>Gaby Boeira</h4>
+          <h3>Gaby Boeira</h3>
           <span class="team-role">CEO · Sobrancelhas · Criolipólise</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="anacarolina" data-cats="depilacao" onclick="openTeamModal('anacarolina')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Ana+Carolina&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Ana Carolina Queiroz" /></div>
-          <h4>Ana Carolina Queiroz</h4>
+          <h3>Ana Carolina Queiroz</h3>
           <span class="team-role">Fisioterapeuta · Depilação a Laser</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="rafaela" data-cats="unhas" onclick="openTeamModal('rafaela')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Rafaela+Rodrigues&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Rafaela Rodrigues" /></div>
-          <h4>Rafaela Rodrigues</h4>
+          <h3>Rafaela Rodrigues</h3>
           <span class="team-role">Manicure</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="mariaclara" data-cats="harmonizacao" onclick="openTeamModal('mariaclara')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Maria+Clara&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Maria Clara Volkmann" /></div>
-          <h4>Maria Clara Volkmann</h4>
+          <h3>Maria Clara Volkmann</h3>
           <span class="team-role">Micropigmentação Labial</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="francieli" data-cats="cabelos" onclick="openTeamModal('francieli')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Francieli+Santos&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Francieli Santos" /></div>
-          <h4>Francieli Santos</h4>
+          <h3>Francieli Santos</h3>
           <span class="team-role">Cabeleireira</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="fernanda" data-cats="unhas" onclick="openTeamModal('fernanda')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Fernanda+Severo&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Fernanda Severo" /></div>
-          <h4>Fernanda Severo</h4>
+          <h3>Fernanda Severo</h3>
           <span class="team-role">Manicure e Pedicure</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="amanda" data-cats="facial" onclick="openTeamModal('amanda')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Amanda+Co&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Amanda Co." /></div>
-          <h4>Amanda Co.</h4>
+          <h3>Amanda Co.</h3>
           <span class="team-role">Estética Facial</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="patricia" data-cats="depilacao" onclick="openTeamModal('patricia')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Patricia+Cardoso&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Patrícia Cardoso" /></div>
-          <h4>Patrícia Cardoso</h4>
+          <h3>Patrícia Cardoso</h3>
           <span class="team-role">Depiladora</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="hellen" data-cats="cilios" onclick="openTeamModal('hellen')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Hellen+Silva&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Hellen Silva" /></div>
-          <h4>Hellen Silva</h4>
+          <h3>Hellen Silva</h3>
           <span class="team-role">Extensionista de Cílios</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="luma" data-cats="bemestar" onclick="openTeamModal('luma')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Luma+Carvalho&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Luma Carvalho" /></div>
-          <h4>Luma Carvalho</h4>
+          <h3>Luma Carvalho</h3>
           <span class="team-role">Massoterapeuta</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="tamahra" data-cats="cabelos" onclick="openTeamModal('tamahra')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Tamahra+Leal&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Tamahra Leal" /></div>
-          <h4>Tamahra Leal</h4>
+          <h3>Tamahra Leal</h3>
           <span class="team-role">Cabeleireira</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="josi" data-cats="unhas" onclick="openTeamModal('josi')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Josi+Santos&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Josi Santos" /></div>
-          <h4>Josi Santos</h4>
+          <h3>Josi Santos</h3>
           <span class="team-role">Manicure</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="ani" data-cats="bemestar" onclick="openTeamModal('ani')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Ani+Santana&background=c9866b&color=fff&size=200&bold=true&font-size=0.38" alt="Ani Santana" /></div>
-          <h4>Ani Santana</h4>
+          <h3>Ani Santana</h3>
           <span class="team-role">Terapeuta Manual</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="team-card" data-key="aline" data-cats="facial,harmonizacao" onclick="openTeamModal('aline')" role="button" tabindex="0">
           <div class="team-avatar"><img src="https://ui-avatars.com/api/?name=Aline+Arias&background=b89370&color=fff&size=200&bold=true&font-size=0.38" alt="Aline Arias" /></div>
-          <h4>Aline Arias</h4>
+          <h3>Aline Arias</h3>
           <span class="team-role">Enfermagem Estética</span>
           <div class="team-card-more">Ver especialidades <i class="fa-solid fa-arrow-right"></i></div>
         </div>
@@ -882,6 +897,7 @@
         <div class="map-placeholder">
           <iframe
             src="https://maps.google.com/maps?q=Av.+Thiago+Aguiar+799+Barra+Velha+SC&output=embed"
+            title="Mapa de localização - Boeira Studio, Av. Thiago Aguiar 799, Barra Velha - SC"
             allowfullscreen loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -909,7 +925,7 @@
 
       <!-- Links -->
       <div class="footer-col">
-        <h4>Links</h4>
+        <h3>Links</h3>
         <ul>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#equipe">Equipe</a></li>
@@ -921,7 +937,7 @@
 
       <!-- Legal -->
       <div class="footer-col">
-        <h4>Legal</h4>
+        <h3>Legal</h3>
         <ul>
           <li><a href="#">Privacidade</a></li>
           <li><a href="#">Termos</a></li>
@@ -930,7 +946,7 @@
 
       <!-- Contato -->
       <div class="footer-col">
-        <h4>Contato</h4>
+        <h3>Contato</h3>
         <div class="footer-contact-item">
           Av. Thiago Aguiar, 799<br>
           Jardim Icaraí · Barra Velha · SC
@@ -1366,11 +1382,21 @@
       let timer;
       let running = false;
 
-      // Init first slide immediately
+      // Init first slide immediately; lazy-load the remaining backgrounds to cut initial payload
       function init() {
         slides[0].classList.add('active');
         buildDots();
         start();
+        const loadRest = () => {
+          slides.forEach((s) => {
+            if (s.dataset.bg) {
+              s.style.backgroundImage = `url('${s.dataset.bg}')`;
+              delete s.dataset.bg;
+            }
+          });
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(loadRest, { timeout: 2000 });
+        else setTimeout(loadRest, 1500);
       }
 
       // Build dots
