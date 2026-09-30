@@ -14,7 +14,7 @@
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/jpeg" href="logo.jpg">
-  <link rel="preload" as="image" href="extracted_images/opt/hero-1.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="extracted_images/opt/hero-1.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -184,15 +184,17 @@
       grid-template-rows: 420px 280px;
       gap: .8rem; margin-top: 2.5rem;
     }
-    .gallery-grid img {
-      width: 100%; height: 100%; object-fit: cover;
-      border-radius: 8px; display: block;
+    .gallery-grid picture {
+      display: block; border-radius: 8px; overflow: hidden;
     }
-    .gallery-grid img:first-child { grid-column: 1; grid-row: 1 / 3; height: 100%; }
-    .gallery-grid img:nth-child(2) { grid-column: 2; grid-row: 1; }
-    .gallery-grid img:nth-child(3) { grid-column: 3; grid-row: 1; }
-    .gallery-grid img:nth-child(4) { grid-column: 2; grid-row: 2; }
-    .gallery-grid img:nth-child(5) { grid-column: 3; grid-row: 2; }
+    .gallery-grid picture img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .gallery-grid picture:first-child { grid-column: 1; grid-row: 1 / 3; height: 100%; }
+    .gallery-grid picture:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .gallery-grid picture:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .gallery-grid picture:nth-child(4) { grid-column: 2; grid-row: 2; }
+    .gallery-grid picture:nth-child(5) { grid-column: 3; grid-row: 2; }
 
     /* ── TEAM ── */
     .team-filters {
@@ -295,7 +297,7 @@
     }
     .footer-brand p {
       font-size: .8rem;
-      color: rgba(255,255,255,.45);
+      color: rgba(255,255,255,.62);
       line-height: 1.6;
       margin-bottom: 1.2rem;
     }
@@ -359,10 +361,10 @@
       align-items: center;
       justify-content: space-between;
       font-size: .75rem;
-      color: rgba(255,255,255,.3);
+      color: rgba(255,255,255,.62);
     }
     .footer-bottom a {
-      color: rgba(255,255,255,.3);
+      color: rgba(255,255,255,.62);
       text-decoration: none;
       transition: color .2s;
     }
@@ -420,7 +422,7 @@
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
       position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 99;
-      background: #25d366; color: var(--white);
+      background: #12753f; color: var(--white);
       width: 52px; height: 52px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,.25);
@@ -483,7 +485,7 @@
     .proc-wa {
       display: inline-flex; align-items: center; gap: .35rem;
       margin-top: .55rem; font-size: .74rem; font-weight: 500;
-      color: #1aad52; text-decoration: none;
+      color: #0d7a3a; text-decoration: none;
       background: #e8f9ef; border-radius: 2rem;
       padding: .28rem .8rem; transition: background .2s;
     }
@@ -493,7 +495,7 @@
       flex-shrink: 0; display: flex; justify-content: center;
     }
     .modal-footer a {
-      background: #25d366; color: var(--white);
+      background: #12753f; color: var(--white);
       padding: .78rem 2.2rem; border-radius: 2rem; text-decoration: none;
       font-size: .9rem; font-weight: 500;
       display: inline-flex; align-items: center; gap: .5rem;
@@ -530,12 +532,12 @@
 
       /* Gallery */
       .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: .6rem; }
-      .gallery-grid img { width: 100%; height: 140px; }
-      .gallery-grid img:first-child { grid-column: span 2; grid-row: auto; height: 200px; }
-      .gallery-grid img:nth-child(2) { grid-column: auto; grid-row: auto; }
-      .gallery-grid img:nth-child(3) { grid-column: auto; grid-row: auto; }
-      .gallery-grid img:nth-child(4) { grid-column: auto; grid-row: auto; }
-      .gallery-grid img:nth-child(5) { grid-column: auto; grid-row: auto; }
+      .gallery-grid picture { width: 100%; height: 140px; }
+      .gallery-grid picture:first-child { grid-column: span 2; grid-row: auto; height: 200px; }
+      .gallery-grid picture:nth-child(2) { grid-column: auto; grid-row: auto; }
+      .gallery-grid picture:nth-child(3) { grid-column: auto; grid-row: auto; }
+      .gallery-grid picture:nth-child(4) { grid-column: auto; grid-row: auto; }
+      .gallery-grid picture:nth-child(5) { grid-column: auto; grid-row: auto; }
 
       /* Team filters */
       .team-filters { gap: .4rem; margin-top: 1.5rem; }
@@ -596,9 +598,9 @@
   <section class="hero" id="inicio">
     <!-- Slides -->
     <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide" style="background-image:url('extracted_images/opt/hero-1.jpg')"></div>
-      <div class="hero-slide" data-bg="extracted_images/opt/hero-2.jpg"></div>
-      <div class="hero-slide" data-bg="extracted_images/opt/hero-3.jpg"></div>
+      <div class="hero-slide" style="background-image:url('extracted_images/opt/hero-1.jpg');background-image:-webkit-image-set(url('extracted_images/opt/hero-1.webp') 1x);background-image:image-set(url('extracted_images/opt/hero-1.webp') type('image/webp'), url('extracted_images/opt/hero-1.jpg') type('image/jpeg'))"></div>
+      <div class="hero-slide" data-bg="extracted_images/opt/hero-2.jpg" data-bg-webp="extracted_images/opt/hero-2.webp"></div>
+      <div class="hero-slide" data-bg="extracted_images/opt/hero-3.jpg" data-bg-webp="extracted_images/opt/hero-3.webp"></div>
     </div>
     <!-- Arrows -->
     <button class="hero-arrow prev" onclick="heroSlide(-1)" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
@@ -712,11 +714,26 @@
       <h2 class="section-title">Nosso espaço &amp; resultados</h2>
       <div class="divider"></div>
       <div class="gallery-grid">
-        <img src="extracted_images/opt/gallery-1.jpg" alt="Studio de Beleza" width="800" height="447" loading="lazy" decoding="async" />
-        <img src="extracted_images/opt/gallery-2.jpg" alt="Tratamentos" width="800" height="447" loading="lazy" decoding="async" />
-        <img src="extracted_images/opt/gallery-3.jpg" alt="Sobrancelhas" width="800" height="447" loading="lazy" decoding="async" />
-        <img src="extracted_images/opt/gallery-4.jpg" alt="Nail Care" width="800" height="447" loading="lazy" decoding="async" />
-        <img src="extracted_images/opt/gallery-5.jpg" alt="Beleza" width="800" height="446" loading="lazy" decoding="async" />
+        <picture>
+          <source srcset="extracted_images/opt/gallery-1.webp" type="image/webp">
+          <img src="extracted_images/opt/gallery-1.jpg" alt="Studio de Beleza" width="800" height="447" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="extracted_images/opt/gallery-2.webp" type="image/webp">
+          <img src="extracted_images/opt/gallery-2.jpg" alt="Tratamentos" width="800" height="447" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="extracted_images/opt/gallery-3.webp" type="image/webp">
+          <img src="extracted_images/opt/gallery-3.jpg" alt="Sobrancelhas" width="800" height="447" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="extracted_images/opt/gallery-4.webp" type="image/webp">
+          <img src="extracted_images/opt/gallery-4.jpg" alt="Nail Care" width="800" height="447" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="extracted_images/opt/gallery-5.webp" type="image/webp">
+          <img src="extracted_images/opt/gallery-5.jpg" alt="Beleza" width="800" height="446" loading="lazy" decoding="async" />
+        </picture>
       </div>
       <p style="text-align:center;margin-top:1.6rem;font-size:.82rem;color:var(--mid);">
         Siga-nos no <a href="https://www.instagram.com/boeirastudio/" target="_blank" style="color:var(--rose);font-weight:500;">@boeirastudio</a> para ver mais resultados
@@ -930,7 +947,7 @@
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#equipe">Equipe</a></li>
           <li><a href="#localizacao">Localização</a></li>
-          <li><a href="https://wa.me/5547996323638" target="_blank">Agendar</a></li>
+          <li><a href="https://wa.me/5547996323638?text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+da+Boeira+Studio.+%F0%9F%98%8A" target="_blank">Agendar horário</a></li>
           <li><a href="/mentoriacrio/">Mentoria VIP</a></li>
         </ul>
       </div>
@@ -984,7 +1001,7 @@
       <button class="modal-close" onclick="closeModal()" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header">
         <div class="modal-header-icon" id="modal-icon"></div>
-        <h2 id="modal-title"></h2>
+        <h2 id="modal-title">Detalhes do serviço</h2>
         <p id="modal-intro"></p>
       </div>
       <div class="modal-body">
@@ -1006,7 +1023,7 @@
         <div style="display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;">
           <div id="tmodal-avatar" style="width:70px;height:70px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.35);"></div>
           <div>
-            <h2 id="tmodal-name" style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.2;"></h2>
+            <h2 id="tmodal-name" style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;line-height:1.2;">Profissional</h2>
             <p id="tmodal-role" style="font-size:.85rem;opacity:.82;margin-top:.3rem;"></p>
           </div>
         </div>
@@ -1390,8 +1407,15 @@
         const loadRest = () => {
           slides.forEach((s) => {
             if (s.dataset.bg) {
-              s.style.backgroundImage = `url('${s.dataset.bg}')`;
+              const jpg = s.dataset.bg;
+              const webp = s.dataset.bgWebp;
+              s.style.backgroundImage = `url('${jpg}')`;
+              if (webp) {
+                s.style.backgroundImage = `-webkit-image-set(url('${webp}') 1x)`;
+                s.style.backgroundImage = `image-set(url('${webp}') type('image/webp'), url('${jpg}') type('image/jpeg'))`;
+              }
               delete s.dataset.bg;
+              delete s.dataset.bgWebp;
             }
           });
         };
